@@ -1,0 +1,28 @@
+.button {
+  display: block;
+  @include links();
+  @include font($font-text, 1.875rem, 600, 100%, #fff); //30px
+  text-align: center;
+  background: $accent-color;
+  border: none;
+  border-radius: 5px;
+  padding: 25px;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: $effect-color;
+  }
+
+  &:focus-visible {
+    background: $effect-color;
+  }
+
+  &:active {
+    background: $effect-color;
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    background: $disabled-color;
+  }
+}

@@ -1,0 +1,45 @@
+.phone {
+  @include links();
+  @include font($font-text, 1.5625rem, 600, 100%, $title-color); // 25px
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  @media #{$desktop} {
+    font-size: 1.125rem; //18px;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 1.875rem; //30px;
+    height: 2.25rem; //36px;
+    background: $accent-color;
+    mask: url("../../images/vector/phone.svg") no-repeat center;
+    mask-size: 100% auto;
+
+    .footer & {
+      width: 1.25rem; //20px;
+      height: 1.5rem; //24px;
+      
+    }
+
+    @media #{$desktop} {
+      background: $accent-color;
+    }
+  }
+
+  &--in-header {
+    &::before {
+      background: $title-color;
+    }
+  }
+
+  &--in-footer {
+    @include font($font-text, 1.125rem, 600, 140%, #000); // 18px
+  }
+}
+
+.phone--in-header .phone__number {
+  display: none;
+}

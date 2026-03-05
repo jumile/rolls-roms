@@ -1,0 +1,22 @@
+$font-title: "Georgia", serif;
+$font-text: "Arial", sans-serif;
+
+$accent-color: #228379;
+$effect-color: #507B8A;
+$title-color: #530400;
+$text-color: #000;
+$disabled-color: #c8c8c8;
+
+$mobile-mb: 4.6875rem; //75px;
+$desktop-mb: 12.375rem; //198px;
+/*
+16px = 1rem
+140% = 22.4px = 1.4rem
+
+*/
+
+//$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1240px;
+
+//$tablet: "(min-width: #{$breakpoint-tablet})";
+$desktop: "(min-width: #{$breakpoint-desktop})";

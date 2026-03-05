@@ -1,0 +1,52 @@
+.burger {
+  width: 29px;
+  height: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  padding: 0;
+
+  .header--open & {
+    height: 21px;
+    justify-content: flex-start;
+  }
+
+  .header--nojs & {
+    display: none;
+  }
+
+  @media #{$desktop} {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 29px; 
+    height: 2px;
+    background: $title-color;
+    box-shadow: 0 7px 0 $title-color;
+    transition: transform 0.3s ease;
+
+    .header--open & {
+      transform: translateY(10px) rotate(-45deg);
+      box-shadow: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 29px; 
+    height: 2px;
+    background: $title-color;
+    transition: transform 0.3s ease;
+
+    .header--open & {
+      transform: translateY(7px) rotate(45deg);
+    }
+  }
+
+}

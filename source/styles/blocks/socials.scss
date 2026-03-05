@@ -1,0 +1,57 @@
+.socials {
+  @include list();
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  @media #{$desktop} {
+    gap: 20px 30px;
+  }
+}
+
+.socials__item {
+  margin-block-end: 0;
+}
+
+.socials__link {
+  @include links();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: $accent-color;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  &--vk::before {
+    mask-image: url(../../images/vector/vk-icon.svg);
+    mask-size: 24px 14px;
+  }
+
+  &--tg::before {
+    mask-image: url(../../images/vector/tg-icon.svg);
+    mask-size: 18px 15px;
+  }
+
+  &:hover {
+    background: $effect-color;
+  }
+
+  &:focus-visible {
+    background: $effect-color;
+  }
+
+  &:active {
+    background: $accent-color;
+    opacity: 0.5;
+  }
+}

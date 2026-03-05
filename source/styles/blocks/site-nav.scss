@@ -1,0 +1,81 @@
+.site-nav__list {
+  @include list();
+  display: none;
+  flex-direction: column;
+  gap: 5px; // + у ссылок по 20рх отступы снизу и сверху = 45
+  background: #fff;
+  padding-bottom: 50px;
+  //box-shadow: 0 -2px 2px #fff, 0 2px 5px rgb(0 0 0 / 0.4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
+  .header--open & {
+    display: flex;
+  }
+
+  .header--nojs & {
+    position: static;
+    display: flex;
+    //box-shadow: none;
+  }
+
+  @media #{$desktop} {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 26px;
+    padding-bottom: 0;
+    padding-top: 34px;
+    box-shadow: none;
+    background: transparent;
+  }
+}
+
+.site-nav__item {
+  &--phone {
+    border-top: $accent-color 1px solid;
+    margin-top: 12px;
+
+    @media #{$desktop} {
+      // display: none;
+      border-top: none;
+      margin-top: -9px;
+      margin-left: auto;
+    }
+  }
+}
+
+.site-nav__link {
+  display: block;
+  @include links();
+  @include font($font-text, 1.875rem, 600, 100%, $title-color); // 30px
+  text-transform: uppercase;
+  padding: 20px;
+
+  @media #{$desktop} {
+    font-size: 1rem; //16px;
+    padding: 0;
+  }
+
+  &--phone {
+    padding-top: 37px;
+
+    @media #{$desktop} {
+      padding-top: 0;
+    }
+  }
+}
+
+.site-nav__logo {
+  display: none;
+
+  @media #{$desktop} {
+    display: block;
+    width: 99px;
+    height: 166px;
+    margin: -34px 10px 0;
+  }
+}

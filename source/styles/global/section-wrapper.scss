@@ -1,0 +1,10 @@
+.section-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media #{$desktop} {
+    max-width: 1240px;
+    width: 100%;
+    margin-inline: auto;
+  }
+}

@@ -1,0 +1,35 @@
+@import 'global/vars.scss';
+@import 'global/mixins.scss';
+@import 'global/global.scss';
+@import 'global/visually-hidden.scss';
+@import 'global/section-wrapper.scss';
+
+
+@import 'blocks/button.scss';
+@import 'blocks/burger.scss';
+@import 'blocks/logo.scss';
+@import 'blocks/site-nav.scss';
+@import 'blocks/phone.scss';
+@import 'blocks/mail.scss';
+@import 'blocks/socials.scss';
+
+@import 'blocks/page.scss';
+@import 'blocks/header.scss';
+@import 'blocks/order.scss';
+@import 'blocks/order-form.scss';
+@import 'blocks/form-field.scss';
+@import 'blocks/checkbox.scss';
+@import 'blocks/footer.scss';
+
+
+
+@import 'wp/common.scss';
+@import 'wp/hero.scss';
+@import 'wp/about.scss';
+//@import 'wp/catalog.scss';
+@import 'wp/slider.scss';
+@import 'wp/buying.scss';
+//@import 'wp/news.scss';
+@import 'wp/accordion.scss';
+@import 'wp/feedback.scss';
+@import 'wp/gallery.scss';

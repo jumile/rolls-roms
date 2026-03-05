@@ -1,0 +1,17 @@
+.order__content {
+   @media #{$desktop} {
+  display: flex;
+  gap: 89px;
+   }
+}
+
+.order__image {
+  display: none;
+
+  @media #{$desktop} {
+    display: block;
+    width: 282px;
+    height: auto;
+    flex-shrink: 0;
+  }
+}

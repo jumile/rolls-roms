@@ -1,0 +1,82 @@
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  @media #{$desktop} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 39px 33px;
+  }
+}
+
+.order-form__message {
+  height: 160px;
+
+  @media #{$desktop} {
+    grid-column: 1/-1;
+  }
+}
+
+.order-form__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  @media #{$desktop} {
+    flex-direction: row;
+    gap: 90px;
+    align-items: center;
+    grid-column: 1/-1;
+  }
+}
+
+.order-form__agreement {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  line-height: 110%;
+  color: #5B5B5B;
+
+  @media #{$desktop} {
+    order: 1;
+    align-items: center;
+  }
+}
+
+.order-form__checkbox {
+  flex-shrink: 0;
+
+  @media #{$desktop} {}
+}
+
+.order-form__agreement:has(.order-form__checkbox:hover) .order-form__agreement-text {
+  color: #000;
+}
+
+.order-form__link {
+  @include links();
+  color: $title-color;
+
+  &:hover {
+    color: $effect-color;
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    color: $effect-color;
+  }
+
+  &:active {
+    color: $title-color;
+    opacity: 0.5;
+  }
+}
+
+.order-form__button {
+  @media #{$desktop} {
+    min-width: 247px;
+    flex-shrink: 0;
+    padding: 18px 25px;
+  }
+}

@@ -1,0 +1,42 @@
+.header {
+  @media #{$desktop} {
+    padding-top: 36px;
+  }
+}
+
+.header__top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 15px 20px 29px;
+
+  @media #{$desktop} {
+    display: none;
+  }
+}
+
+.header__logo {
+  display: block;
+  width: 30px;
+  height: 50px;
+  justify-self: center;
+  grid-column: 2/3;
+}
+
+.header__phone {
+  justify-self: end;
+
+  @media #{$desktop} {
+    padding-top: 25px;
+  }
+}
+
+.header__nav {
+  @media #{$desktop} {
+    max-width: 1240px;
+    width: 100%;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    padding: 0 20px 34px;
+  }
+}

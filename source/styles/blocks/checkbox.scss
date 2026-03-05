@@ -1,0 +1,32 @@
+.checkbox {
+  appearance: none;
+  margin: 0;
+  border: 2px solid $title-color;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #fff;
+
+  &:hover {
+    border-color: $accent-color;
+  }
+
+  &:focus-visible {
+    border-color: $accent-color;
+  }
+
+  &:active {
+    border-color: $title-color;
+  }
+
+  &:disabled {
+    background: $disabled-color;
+  }
+
+  &:checked {
+    background-image: url(../../images/vector/tick.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 21px auto;
+  }
+}

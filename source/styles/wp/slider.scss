@@ -1,0 +1,79 @@
+.slider {
+   @media #{$desktop} {
+    position: relative;
+  }
+}
+.slider__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-block-end: 45px;
+
+  @media #{$desktop} {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.slider__button {
+  display: block;
+  width: 41px;
+  height: 16px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-image: url(../../images/vector/arrow-mobile.svg);
+
+  &--left {}
+
+  &--right {
+    transform: rotate(180deg);
+  }
+
+  @media #{$desktop} {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: $accent-color;
+    background-position: center;
+    background-image: url(../../images/vector/arrow-desktop.svg);
+    background-size: 26px auto;
+  }
+}
+
+.slider__list {
+  @include list();
+  display: flex;
+  gap: 21px;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.slider__item {
+  padding: 20px;
+  border: 2px solid $accent-color;
+  border-radius: 10px;
+  flex-shrink: 0;
+  flex-basis: 320px;
+}
+
+.slider-image {
+  display: block;
+  width: 280px;
+  //height: 210px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-block-end: 24px;
+}
+
+.slider__title {
+  @include margin-tb(0.625rem); //10px
+  @include font($font-text, 1.25rem, 700, 130%, $text-color); // 20px
+}
+.slider__description {
+   @include margin-tb(0); 
+}

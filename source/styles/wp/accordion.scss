@@ -1,0 +1,78 @@
+.accordion {
+  @include list();
+}
+
+.accordion__panel {
+  margin-block-end: 30px;
+
+  @media #{$desktop} {
+    margin-block-end: 40px;
+  }
+
+  &--open {}
+}
+
+.accordion__panel-title {
+  @include font($font-text, 1.25rem, 600, 130%, $title-color); //20px;
+  text-transform: uppercase;
+  @include margin-tb(0.6875rem); //11px
+  display: flex;
+  gap: 9px;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: $title-color;
+    mask: url(../../images/vector/arrow-news-down.svg) no-repeat;
+    mask-size: 23px auto;
+  }
+
+  &:has(a:hover)::before {
+    background: $effect-color;
+  }
+
+  &:has(a:focus-visible)::before {
+    background: $effect-color;
+  }
+
+  &:has(a:active)::before {
+    background: $title-color;
+    opacity: 0.5;
+  }
+
+}
+
+.accordion__panel-title a {
+  @include links();
+
+  &:hover,
+  &:focus-visible {
+    color: $effect-color;
+  }
+
+  &:active {
+    color: $title-color;
+    opacity: 0.5;
+  }
+}
+
+.accordion__panel-content {
+  display: none;
+}
+
+.accordion__panel-content p {
+  @include margin-tb(0.75rem); //12px
+}
+
+.accordion__panel--open {
+  & .accordion__panel-title::before {
+    mask: url(../../images/vector/arrow-news-up.svg) no-repeat;
+  }
+
+  & .accordion__panel-content {
+    display: block;
+  }
+}

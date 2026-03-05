@@ -1,0 +1,45 @@
+.about {
+  position: relative;
+
+  @media #{$desktop} {
+    padding-bottom: 85px;
+  }
+}
+
+.about::after {
+  @media #{$desktop} {
+    content: "";
+    display: block;
+    width: 178px;
+    height: 169px;
+    background: url(../../images/natural.png) no-repeat center;
+    position: absolute;
+    bottom: 0;
+    right: -87px;
+  }
+}
+
+.about__big-image {
+  max-width: 320px;
+  height: auto;
+  display: block;
+  margin: 5px auto 10px;
+  border-radius: 10px;
+
+  @media #{$desktop} {
+    float: right;
+    max-width: 537px;
+    margin: 25px 0 150px 66px;
+  }
+}
+
+.about__image-divider {
+  max-width: 178px;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+
+  @media #{$desktop} {
+    display: none;
+  }
+}

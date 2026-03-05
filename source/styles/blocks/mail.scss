@@ -1,0 +1,28 @@
+.mail {
+  @include links();
+  @include font($font-text, 1.125rem, 600, 140%, #000); // 18px
+  display: flex;
+  align-items: center;
+  gap: 9px;
+ /*  @media #{$desktop} {
+    font-size: 1.125rem; //18px;
+
+    &::before {
+      background: $accent-color;
+    }
+  } */
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 1.25rem; //20px;
+    height: 1.25rem; //20px;
+    background: $accent-color;
+    mask: url("../../images/vector/mail.svg") no-repeat center;
+    mask-size: 100% auto;
+  }
+ 
+}
+
+
+
