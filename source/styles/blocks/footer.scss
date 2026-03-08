@@ -46,8 +46,8 @@
   @include list();
   margin-block-start: 35px;
   margin-block-end: 25px;
-  column-count: 2;
-  column-width: 50%;
+  column-count: auto;
+  column-width: 180px;
 
   @media #{$desktop} {
     margin: 0;

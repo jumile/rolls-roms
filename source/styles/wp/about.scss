@@ -3,27 +3,36 @@
 
   @media #{$desktop} {
     padding-bottom: 85px;
+    margin-block-end: $desktop-mb-small;
   }
 }
 
-.about::after {
+.about__wrapper {
   @media #{$desktop} {
-    content: "";
-    display: block;
-    width: 178px;
-    height: 169px;
-    background: url(../../images/natural.png) no-repeat center;
-    position: absolute;
-    bottom: 0;
-    right: -87px;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 178px;
+      height: 169px;
+      background: url(../../images/natural.png) no-repeat center;
+      position: absolute;
+      bottom: -100px;
+      right: 0;
+      z-index: -1;
+    }
   }
 }
+
 
 .about__big-image {
   max-width: 320px;
   height: auto;
   display: block;
-  margin: 5px auto 10px;
+  margin: 22px auto 22px;
   border-radius: 10px;
 
   @media #{$desktop} {

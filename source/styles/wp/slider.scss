@@ -1,8 +1,9 @@
 .slider {
-   @media #{$desktop} {
+  @media #{$desktop} {
     position: relative;
   }
 }
+
 .slider__buttons {
   display: flex;
   justify-content: space-between;
@@ -21,27 +22,10 @@
   display: block;
   width: 41px;
   height: 16px;
-  border: none;
-  padding: 0;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-image: url(../../images/vector/arrow-mobile.svg);
-
-  &--left {}
-
-  &--right {
-    transform: rotate(180deg);
-  }
 
   @media #{$desktop} {
     width: 70px;
     height: 70px;
-    border-radius: 50%;
-    background-color: $accent-color;
-    background-position: center;
-    background-image: url(../../images/vector/arrow-desktop.svg);
-    background-size: 26px auto;
   }
 }
 
@@ -49,8 +33,11 @@
   @include list();
   display: flex;
   gap: 21px;
-  justify-content: center;
   overflow-x: hidden;
+
+  @media #{$desktop} {
+    justify-content: center;
+  }
 }
 
 .slider__item {
@@ -74,6 +61,7 @@
   @include margin-tb(0.625rem); //10px
   @include font($font-text, 1.25rem, 700, 130%, $text-color); // 20px
 }
+
 .slider__description {
-   @include margin-tb(0); 
+  @include margin-tb(0);
 }

@@ -69,7 +69,7 @@ export function processStyles() {
 export function processScripts() {
   const gulpEsbuild = createGulpEsbuild({ incremental: isDevelopment });
 
-  return src(`${PATH_TO_SOURCE}js/*.js`)
+  return src(`${PATH_TO_SOURCE}scripts/*.js`)
     .pipe(gulpEsbuild({
       bundle: true,
       // format: 'esm',
@@ -78,7 +78,7 @@ export function processScripts() {
       sourcemap: isDevelopment,
       target: browserslistToEsbuild(),
     }))
-    .pipe(dest(`${PATH_TO_DIST}js`))
+    .pipe(dest(`${PATH_TO_DIST}scripts`))
     .pipe(server.stream());
 }
 

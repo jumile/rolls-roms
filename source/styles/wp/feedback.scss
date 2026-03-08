@@ -16,10 +16,9 @@
 .feedback__button {
   width: 20rem; // 320px;
   margin-inline: auto;
-  font-size: 1.6875rem; // 27px  
 
   @media #{$desktop} {
-    width: 23.6875rem; // 379px    
+    width: 23.6875rem; // 379px
   }
 
   &--nojs {

@@ -7,8 +7,10 @@ $title-color: #530400;
 $text-color: #000;
 $disabled-color: #c8c8c8;
 
-$mobile-mb: 4.6875rem; //75px;
-$desktop-mb: 12.375rem; //198px;
+$mobile-mb: 7.5rem; //120px;
+$desktop-mb: 13.75rem; //220px;
+$desktop-mb-small: 9.375rem; //150px; для блоков, где снизу есть доп. нижний отступ
+
 /*
 16px = 1rem
 140% = 22.4px = 1.4rem

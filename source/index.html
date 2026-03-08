@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="styles/styles.css">
   <title>Роллс-Ромс</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/scripts.js" defer></script>
 </head>
 
@@ -30,16 +30,16 @@
 
     <nav class="header__nav site-nav">
       <ul class="site-nav__list">
-        <li class="site-nav__item"><a href="#" class="site-nav__link">О продукте</a></li>
-        <li class="site-nav__item"><a href="#" class="site-nav__link">Каталог</a></li>
-        <li class="site-nav__item"><a href="#" class="site-nav__link">Где купить</a></li>
-        <li class="site-nav__item"><a href="#" class="site-nav__link">Новости</a></li>
-        <li class="site-nav__item"><a href="#" class="site-nav__link">Отзывы</a></li>
+        <li class="site-nav__item"><a href="#about" class="site-nav__link">О продукте</a></li>
+        <li class="site-nav__item"><a href="#catalog" class="site-nav__link">Каталог</a></li>
+        <li class="site-nav__item"><a href="#buying" class="site-nav__link">Где купить</a></li>
+        <li class="site-nav__item"><a href="#news" class="site-nav__link">Новости</a></li>
+        <li class="site-nav__item"><a href="#feedback" class="site-nav__link">Отзывы</a></li>
         <li class="site-nav__item">
           <img class="site-nav__logo logo" src="images/logo.svg" alt="Логотип Роллс-Ромс" width="30" height="50">
         </li>
-        <li class="site-nav__item"><a href="#" class="site-nav__link">Написать</a></li>
-        <li class="site-nav__item"><a href="#" class="site-nav__link">Фотогалерея</a></li>
+        <li class="site-nav__item"><a href="#write" class="site-nav__link">Написать</a></li>
+        <li class="site-nav__item"><a href="#gallery" class="site-nav__link">Фотогалерея</a></li>
 
         <li class="site-nav__item site-nav__item--phone"><a href="tel:+79937233377"
             class="site-nav__link site-nav__link--phone phone">
@@ -69,62 +69,75 @@
       </div>
     </section>
 
-    <section class="about section-wrapper">
-      <!-- wysiwyg -->
-      <h2>О продукте</h2>
-      <p><b>Ромовый шарик… Правда, звучит классно?</b></p>
-      <p>«Какое доказательство существования бога вам еще нужно?» - отзыв на английском из сети😊</p>
-      <img class="about__big-image" src="images/about-product1.jpg" alt="Упаковка для ромовых шариков" width="320"
-        height="240">
-      <p>Немного истории: покатавшись по свету я с удивлением обнаружил, что любимый и обязательный атрибут праздничного
-        стола в т.н. «цивилизованном мире» - десерт под общим названием «Ромовый шарик»</p>
-      <ul>
-        <li>English: A rum ball</li>
-        <li>Dansk: Romkugle, Trøffel</li>
-        <li>Deutsch: Rumkugel</li>
-        <li>Čeština: Rumové koule</li>
-        <li>Polski: Bajadera</li>
-        <li>Sveden: Аrraksboll (поскольку, вместо рома используется арак)</li>
-        <li>Brasilia: Brigadeiros (однако brigadeiros изготовлены из сгущенного молока)</li>
-      </ul>
-      <p>совершенно неизвестен в России. Вернее, не так: узко известен (поскольку, его делают иногда редкие домашние
-        кондитеры, и даже в одной из торговых сетей Красноярска много лет назад я увидел упаковку ромовых шариков на
-        полке. Они были не очень – не очень ненастоящие, из суррогатов. Зато недорогие. И тихо куда-то исчезли через
-        год-два ).</p>
-      <p>Мне всегда нравилось готовить самому (в этом редком случае ты почти уверен в том, что ешь): я покопался в сети,
-        перебрал кучу ингредиентов, перетасовал разные пропорции, перепробовал многочисленные результаты и, по итогу,
-        нашел искомое. Сначала это понравилось моим близким, потом близким близких, а потом стало ясно, что знакомить с
-        таким простым на первый взгляд, но таким славным дополнением к чаю и кофе нужно всех и сразу. Так родилась идея.
-      </p>
-      <img class="about__image-divider" src="images/roll-divider.png" alt="Ромовый шарик" width="142" height="118">
-      <p>Итак, ромовый шарик Роллс-Ромс. Почему он так называется? Во-первых, роллс – катиться, катать, крутить –
-        круглый, в общем. Что и есть факт – шарик же. Ну а roms – ясно, что тут пахнет ромом: так и есть, ром в составе
-        – самый настоящий. А вместе – Роллс-Ромс/Rolls-Roms – напоминает что-то дорогое и премиальное, правда? Ну что
-        делать, так уж получилось )) </p>
-      <img class="about__image-divider" src="images/natural.png" alt="100% натуральный продукт" width="178"
-        height="169">
-      <p>Продукт на самом деле в некотором смысле премиальный, по части состава: настоящее сливочное масло (а не
-        растительный спрэд), настоящий шоколад (а не кондитерская глазурь), настоящий же и ром (а не искусственный
-        ароматизатор) и т.п. За состав не стыдно. А вот по цене ромовые шарики Роллс-Ромс (и с учетом нетто-веса
-        упаковки – 260 граммов) – даже с учетом наценки торговых сетей – вполне демократичны и куда дешевле своих
-        конкурентов по кондитерской полке, которые не могут похвастать таким натуральным составом.</p>
-      <p>Я надеюсь, что Вы сами почувствуете это послевкусие, почти забытое в мире химического питания. И непреодолимое
-        желание взять еще один шарик. И еще… Будьте осторожны, не попадите в зависимость от ромовых шариков Роллс-Ромс!
-        😊 </p>
-      <p>И в заключение: я надеюсь, что ромовые шарики Роллс-Ромс по праву займут своё достойное место как на полках
-        магазинов и торговых сетей, так и в сердцах своих покупателей. Пусть у нас с вами всё получится!</p>
-      <p><b>Приятного аппетита!</b></p>
-      <!-- ./wysiwyg -->
+    <section class="about" id="about">
+      <div class="about__wrapper">
+        <div class="section-wrapper">
+          <!-- wysiwyg -->
+          <h2>О продукте</h2>
+          <p><b>Ромовый шарик… Правда, звучит классно?</b></p>
+          <p>«Какое доказательство существования бога вам еще нужно?» - отзыв на английском из сети😊</p>
+          <img class="about__big-image" src="images/about-product1.jpg" alt="Упаковка для ромовых шариков" width="320"
+            height="240">
+          <p>Немного истории: покатавшись по свету я с удивлением обнаружил, что любимый и обязательный атрибут
+            праздничного
+            стола в т.н. «цивилизованном мире» - десерт под общим названием «Ромовый шарик»</p>
+          <ul>
+            <li>English: A rum ball</li>
+            <li>Dansk: Romkugle, Trøffel</li>
+            <li>Deutsch: Rumkugel</li>
+            <li>Čeština: Rumové koule</li>
+            <li>Polski: Bajadera</li>
+            <li>Sveden: Аrraksboll (поскольку, вместо рома используется арак)</li>
+            <li>Brasilia: Brigadeiros (однако brigadeiros изготовлены из сгущенного молока)</li>
+          </ul>
+          <p>совершенно неизвестен в России. Вернее, не так: узко известен (поскольку, его делают иногда редкие домашние
+            кондитеры, и даже в одной из торговых сетей Красноярска много лет назад я увидел упаковку ромовых шариков на
+            полке. Они были не очень – не очень ненастоящие, из суррогатов. Зато недорогие. И тихо куда-то исчезли через
+            год-два ).</p>
+          <p>Мне всегда нравилось готовить самому (в этом редком случае ты почти уверен в том, что ешь): я покопался в
+            сети,
+            перебрал кучу ингредиентов, перетасовал разные пропорции, перепробовал многочисленные результаты и, по
+            итогу,
+            нашел искомое. Сначала это понравилось моим близким, потом близким близких, а потом стало ясно, что
+            знакомить с
+            таким простым на первый взгляд, но таким славным дополнением к чаю и кофе нужно всех и сразу. Так родилась
+            идея.
+          </p>
+          <img class="about__image-divider" src="images/roll-divider.png" alt="Ромовый шарик" width="142" height="118">
+          <p>Итак, ромовый шарик Роллс-Ромс. Почему он так называется? Во-первых, роллс – катиться, катать, крутить –
+            круглый, в общем. Что и есть факт – шарик же. Ну а roms – ясно, что тут пахнет ромом: так и есть, ром в
+            составе
+            – самый настоящий. А вместе – Роллс-Ромс/Rolls-Roms – напоминает что-то дорогое и премиальное, правда? Ну
+            что
+            делать, так уж получилось )) </p>
+          <img class="about__image-divider" src="images/natural.png" alt="100% натуральный продукт" width="178"
+            height="169">
+          <p>Продукт на самом деле в некотором смысле премиальный, по части состава: настоящее сливочное масло (а не
+            растительный спрэд), настоящий шоколад (а не кондитерская глазурь), настоящий же и ром (а не искусственный
+            ароматизатор) и т.п. За состав не стыдно. А вот по цене ромовые шарики Роллс-Ромс (и с учетом нетто-веса
+            упаковки – 260 граммов) – даже с учетом наценки торговых сетей – вполне демократичны и куда дешевле своих
+            конкурентов по кондитерской полке, которые не могут похвастать таким натуральным составом.</p>
+          <p>Я надеюсь, что Вы сами почувствуете это послевкусие, почти забытое в мире химического питания. И
+            непреодолимое
+            желание взять еще один шарик. И еще… Будьте осторожны, не попадите в зависимость от ромовых шариков
+            Роллс-Ромс!
+            😊 </p>
+          <p>И в заключение: я надеюсь, что ромовые шарики Роллс-Ромс по праву займут своё достойное место как на полках
+            магазинов и торговых сетей, так и в сердцах своих покупателей. Пусть у нас с вами всё получится!</p>
+          <p><b>Приятного аппетита!</b></p>
+          <!-- ./wysiwyg -->
+        </div>
+      </div>
     </section>
 
-    <section class="catalog section-wrapper">
+    <section class="catalog section-wrapper" id="catalog">
       <!-- wysiwyg -->
       <h2>Каталог</h2>
       <div class="slider">
         <div class="slider__buttons">
-          <button class="slider__button slider__button--left" type="button" aria-label="Предыдущий слайд">
+          <button class="slider__button button-round button-round--left" type="button" aria-label="Предыдущий слайд">
           </button>
-          <button class="slider__button slider__button--right" type="button" aria-label="Следующий слайд">
+          <button class="slider__button button-round button-round--right" type="button" aria-label="Следующий слайд">
           </button>
         </div>
 
@@ -158,7 +171,7 @@
       <!-- ./wysiwyg -->
     </section>
 
-    <section class="buying section-wrapper">
+    <section class="buying section-wrapper" id="buying">
       <!-- wysiwyg -->
       <h2>Где купить</h2>
       <div class="cols-2">
@@ -174,7 +187,7 @@
       <!-- ./wysiwyg -->
     </section>
 
-    <section class="news section-wrapper">
+    <section class="news section-wrapper" id="news">
       <!-- wysiwyg -->
       <h2>Новости</h2>
       <ul class="accordion">
@@ -214,7 +227,7 @@
 
         <li class="accordion__panel">
           <h3 class="accordion__panel-title">
-            <a href="news2">Новость 2</a>
+            <a href="#news2">Новость 2</a>
           </h3>
           <div class="accordion__panel-content" id="news2">
             <p>Здравствуйте, уважаемые гости сайта.</p>
@@ -230,7 +243,7 @@
         </li>
         <li class="accordion__panel">
           <h3 class="accordion__panel-title">
-            <a href="news3">Новость 3</a>
+            <a href="#news3">Новость 3</a>
           </h3>
           <div class="accordion__panel-content" id="news3">
             <p>Еще одна тестовая новость</p>
@@ -241,7 +254,7 @@
       <!-- ./wysiwyg -->
     </section>
 
-    <section class="feedback section-wrapper">
+    <section class="feedback section-wrapper" id="feedback">
       <!-- wysiwyg -->
       <h2>Отзывы покупателей</h2>
       <ul class="feedback__list">
@@ -341,12 +354,12 @@
         </li>
       </ul>
       <!-- ./wysiwyg -->
-      <button class="button feedback__button feedback__button--nojs" type="button">
+      <button class="button button--font-small feedback__button feedback__button--nojs" type="button">
         Почитать все
       </button>
     </section>
 
-    <section class="order section-wrapper">
+    <section class="order section-wrapper" id="write">
       <h2>Написать нам</h2>
       <div class="order__content">
         <form action="#" class="order__form order-form" method="post">
@@ -368,7 +381,7 @@
                 в соответствии <a class="order-form__link" href="#">с условиями обработки персональных
                   данных</a>.</span>
             </label>
-            <button class="button order-form__button" type="submit">Отправить</button>
+            <button class="button button--font-small order-form__button" type="submit">Отправить</button>
           </div>
         </form>
 
@@ -380,14 +393,16 @@
       </div>
     </section>
 
-    <section class="section-wrapper">
+    <section class="section-wrapper" id="gallery">
       <!-- wysiwyg -->
       <h2>Фотогалерея</h2>
       <div class="gallery">
         <div class="gallery__buttons">
-          <button class="gallery__button gallery__button--left" type="button" aria-label="Предыдущее изображение">
+          <button class="gallery__button button-round button-round--left" type="button"
+            aria-label="Предыдущее изображение">
           </button>
-          <button class="gallery__button gallery__button--right" type="button" aria-label="Следующее изображение">
+          <button class="gallery__button button-round button-round--right" type="button"
+            aria-label="Следующее изображение">
           </button>
         </div>
 

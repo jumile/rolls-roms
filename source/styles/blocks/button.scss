@@ -7,18 +7,26 @@
   border: none;
   border-radius: 5px;
   padding: 25px;
+  cursor: pointer;
   transition: background 0.3s ease;
+
+  &--font-small {
+    font-size: 1.6875rem; // 27px
+  }
 
   &:hover {
     background: $effect-color;
+    color: #fff;
   }
 
   &:focus-visible {
     background: $effect-color;
+    color: #fff;
   }
 
   &:active {
     background: $effect-color;
+    color: #fff;
     opacity: 0.8;
   }
 

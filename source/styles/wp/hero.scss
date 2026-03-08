@@ -1,7 +1,9 @@
 .hero {
-  //margin-block-end: $mobile-mb; // есть в common/section
+ // margin-block-end: $mobile-mb; // есть в common/section
 
   @media #{$desktop} {
+    margin-block-end: $desktop-mb-small;
+
     &::after {
       content: "";
       display: block;
@@ -28,7 +30,9 @@
   display: flex;
   gap: 17px;
   align-items: center;
+  justify-content: center;
   margin-block-end: 3.125rem; //50px;
+  margin-block-start: 2.375rem; // 38px
 
   @media #{$desktop} {
     display: block;

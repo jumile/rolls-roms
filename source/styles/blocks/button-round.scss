@@ -1,0 +1,43 @@
+.button-round {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-image: url(../../images/vector/arrow-mobile.svg);
+  cursor: pointer;
+
+  &--left {}
+
+  &--right {
+    transform: rotate(180deg);
+  }
+
+  @media #{$desktop} {
+    border-radius: 50%;
+    background-color: $accent-color;
+    background-position: center;
+    background-image: url(../../images/vector/arrow-desktop.svg);
+    background-size: 26px auto;
+  }
+  &:hover {
+    background-color: $effect-color;
+    color: #fff;
+  }
+
+  &:focus-visible {
+    background-color: $effect-color;
+    color: #fff;
+  }
+
+  &:active {
+    background-color: $effect-color;
+    color: #fff;
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    background-color: $disabled-color;
+    visibility: hidden;
+  }
+}

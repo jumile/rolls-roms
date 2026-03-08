@@ -8,12 +8,12 @@ section {
 }
 
 h2 {
-  @include margin-tb(2.8125rem); // 45px
+  @include margin-tb(3.75rem); // 60px
   @include font($font-title, 2.25rem, 700, 130%, $title-color); // 36px
   text-transform: uppercase;
 
   @media #{$desktop} {
-    @include margin-tb(1.625rem); // 26px
+    @include margin-tb(7.5rem); // 120px
     font-size: 3.4375rem; //55px
   }
 }
@@ -43,7 +43,7 @@ li {
   margin-block-end: 0.5rem;
 
   /*  @media #{$desktop} {
-    @include margin-tb(0.5rem); 
+    @include margin-tb(0.5rem);
   } */
 }
 

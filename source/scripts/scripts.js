@@ -1,14 +1,25 @@
 // burger
 const header = document.querySelector('.header');
 const burgerBtn = document.querySelector('.burger');
+const menu = document.querySelector('.site-nav');
 
 if (header) {
   header.classList.remove('header--nojs');
 
   burgerBtn.addEventListener('click', () => {
     header.classList.toggle('header--open');
-  })
+  });
+
+  menu.addEventListener('click', (ev) => {
+    let target = ev.target;
+    if (target.classList.contains('site-nav__link')) {
+      header.classList.toggle('header--open');
+    }
+  });
 }
+
+
+
 
 // feedback
 const moreFeedbackButton = document.querySelector('.feedback__button');
@@ -41,7 +52,7 @@ if (moreFeedbackButton && feedbacks) {
 const agreementCheckbox = document.getElementById('agreement');
 const orderSubmitButton = document.querySelector('.order-form__button');
 
-if(orderSubmitButton) orderSubmitButton.disabled = true;
+if (orderSubmitButton) orderSubmitButton.disabled = true;
 
 if (agreementCheckbox && orderSubmitButton) {
   agreementCheckbox.addEventListener('change', () => {
@@ -53,5 +64,20 @@ if (agreementCheckbox && orderSubmitButton) {
   });
 }
 
+// smooth scrolling
+const smoothScroll = () => {
+  const scrollLinks = document.querySelectorAll('.site-nav a[href^="#"]:not(.site-nav a[href="#"])');
+  scrollLinks.forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      e.preventDefault();
+      let id = anchor.getAttribute('href');
+      id = id.substring(1);
+      document.getElementById(id).scrollIntoView({
+        behavior: 'smooth'
+      });
+    })
+  });
+}
 
+smoothScroll();
 
