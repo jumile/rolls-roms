@@ -1,9 +1,9 @@
 .about {
-  position: relative;
+  //position: relative;
 
   @media #{$desktop} {
-    padding-bottom: 85px;
-    margin-block-end: $desktop-mb-small;
+   // padding-bottom: 85px;
+    margin-block-end: $desktop-mb-small;    
   }
 }
 
@@ -11,9 +11,11 @@
   @media #{$desktop} {
     max-width: 1440px;
     margin: 0 auto;
-    position: relative;
+    //position: relative;
 
-    &::after {
+    background: url(../../images/natural.png) no-repeat right bottom;
+
+    /* &::after {
       content: "";
       display: block;
       width: 178px;
@@ -23,26 +25,21 @@
       bottom: -100px;
       right: 0;
       z-index: -1;
-    }
+    } */
   }
 }
 
 
-.about__big-image {
+/* .about__big-image {
   max-width: 320px;
   height: auto;
   display: block;
   margin: 22px auto 22px;
   border-radius: 10px;
 
-  @media #{$desktop} {
-    float: right;
-    max-width: 537px;
-    margin: 25px 0 150px 66px;
-  }
-}
+} */
 
-.about__image-divider {
+/* .about__image-divider {
   max-width: 178px;
   height: auto;
   display: block;
@@ -51,4 +48,4 @@
   @media #{$desktop} {
     display: none;
   }
-}
+} */

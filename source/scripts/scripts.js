@@ -19,11 +19,9 @@ if (header) {
 }
 
 
-
-
 // feedback
 const moreFeedbackButton = document.querySelector('.feedback__button');
-const feedbacks = document.querySelectorAll('.feedback__list li');
+const feedbacks = document.querySelectorAll('.feedback li');
 let feedbackShowFlag = false;
 
 moreFeedbackButton.classList.remove('feedback__button--nojs');
@@ -66,7 +64,7 @@ if (agreementCheckbox && orderSubmitButton) {
 
 // smooth scrolling
 const smoothScroll = () => {
-  const scrollLinks = document.querySelectorAll('.site-nav a[href^="#"]:not(.site-nav a[href="#"])');
+  const scrollLinks = document.querySelectorAll('.site-nav a[href^="#"]:not(.site-nav a[href="#"]), .footer__nav-link[href^="#"]:not(.footer__nav-link[href="#"])');
   scrollLinks.forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       e.preventDefault();

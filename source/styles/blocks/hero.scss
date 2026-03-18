@@ -1,0 +1,113 @@
+.hero {
+  // margin-block-end: $mobile-mb; // есть в common/section
+  @media #{$desktop} {
+    margin-block-end: $desktop-mb-small;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 265px; //202px;
+      background: url("../../images/vector/decorative-line.svg") no-repeat center top;
+    }
+  }
+}
+
+.hero__inner {
+  @media #{$desktop} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    align-items: start;
+    position: relative;
+    padding-top: 2.4375rem; //39px;
+    margin-block-end: 100px;
+  }
+}
+
+.hero__title {
+  @include margin-tb(1.06rem); // 17px
+  color: $title-color;
+  text-align: center;
+
+  @media #{$desktop} {
+    @include margin-tb(1.375rem); // 22px
+    padding-top: 2.1875rem; //35px;
+  }
+}
+
+.hero__title-image {
+  display: block;
+  width: 330px;
+  height: 205px;
+  margin-inline: auto;
+
+  @media #{$desktop} {
+    width: 595px;
+    height: 337px;
+  }
+}
+
+.hero__image {
+  display: block;
+  width: 339px;
+  height: auto;
+  margin-inline: auto;
+
+  @media #{$desktop} {
+    width: 720px;
+    max-width: none;
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    margin-left: -100px;
+  }
+}
+
+.hero__leading {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+  justify-content: center;
+  margin-block-end: 3.125rem; //50px;
+  margin-block-start: 2.375rem; // 38px
+
+  @media #{$desktop} {
+    display: block;
+    width: 379px;
+    margin: 0 auto 2.8125rem; //45px;
+  }
+}
+
+
+.hero__leading-img {
+  display: block;
+  width: 62px;
+
+  @media #{$desktop} {
+    width: 114px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.hero__leading-text {
+  @include margin-tb(0);
+  @include font($font-text, 1.25rem, 500, 130%, $title-color);
+  text-transform: uppercase;
+
+  @media #{$desktop} {
+    //@include margin-tb(2.8125rem); // 45px
+    @include margin-tb(0);
+    text-align: center;
+  }
+}
+
+/* .hero__button {
+  width: 20rem; // 320px;
+  margin-inline: auto;
+
+  @media #{$desktop} {
+    width: 23.6875rem; // 379px;
+  }
+} */

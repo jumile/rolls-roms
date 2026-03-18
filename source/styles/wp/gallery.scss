@@ -56,5 +56,9 @@
   display: block;
   max-width: 100%;
   object-fit: contain;
-  width: 100%; // !!! убрать, когда будет норм. изображение
+  width: 100%;
+
+  @media #{$desktop} {
+    width: auto;
+  }
 }

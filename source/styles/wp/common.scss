@@ -50,7 +50,8 @@ li {
 a {
   color: $accent-color;
 
-  &:hover, &:focus-visible {
+  &:hover,
+  &:focus-visible {
     color: $effect-color;
   }
 
@@ -65,10 +66,32 @@ a {
   @media #{$desktop} {
     display: flex;
     gap: 50px;
+    align-items: flex-start;
   }
 
   & img {
     flex-shrink: 0;
-  }
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin: 0 auto 45px;
+    border-radius: 10px;
 
+    @media #{$desktop} {
+      width: 537px;
+      max-width: none;
+      margin: 0;
+    }
+  }
+}
+// изображения внутри текста, как разделители (в мобилке)
+.cols-2-text-wrapper img {
+  max-width: 178px;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+
+  @media #{$desktop} {
+    display: none;
+  }
 }
