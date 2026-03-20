@@ -1,11 +1,12 @@
 .order__content {
-   @media #{$desktop} {
-  display: flex;
-  gap: 89px;
-   }
+  @media #{$desktop} {
+    display: flex;
+    gap: 89px;
+  }
 }
 
-.order__image {
+.order__image,
+.order-image {
   display: none;
 
   @media #{$desktop} {

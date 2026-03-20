@@ -1,7 +1,7 @@
 .hero {
   // margin-block-end: $mobile-mb; // есть в common/section
   @media #{$desktop} {
-    margin-block-end: $desktop-mb-small;
+    //--margin-block-end: $desktop-mb-small;
 
     &::after {
       content: "";

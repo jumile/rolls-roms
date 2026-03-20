@@ -1,0 +1,21 @@
+//++ удалить для wp
+.cols-2 {
+  @media #{$desktop} {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+  }
+
+  & img {
+    flex-shrink: 0;
+    display: block;
+    margin: 0 auto 45px;
+    border-radius: 10px;
+
+    @media #{$desktop} {
+      width: 537px;
+      max-width: none;
+      margin: 0;
+    }
+  }
+}

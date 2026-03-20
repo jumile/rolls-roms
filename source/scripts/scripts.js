@@ -20,13 +20,19 @@ if (header) {
 
 
 // feedback
-const moreFeedbackButton = document.querySelector('.feedback__button');
-const feedbacks = document.querySelectorAll('.feedback li');
+//--const moreFeedbackButton = document.querySelector('.feedback__button');
+const moreFeedbackButton = document.querySelector('.feedback .wp-block-button__link'); // кнопка в WP
+const feedbacks = document.querySelectorAll('.feedback li, .feedback-list li');
 let feedbackShowFlag = false;
 
-moreFeedbackButton.classList.remove('feedback__button--nojs');
+//--moreFeedbackButton.classList.remove('feedback__button--nojs');
 
 if (feedbacks) {
+  //  wp
+  if(feedbacks.length <= 4) {
+    moreFeedbackButton.style.display='none';
+  }
+  
   feedbacks.forEach((item, index) => {
     if (index >= 4) {
       item.classList.add('hidden');

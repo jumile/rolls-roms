@@ -1,4 +1,4 @@
-// не нужно wp
+// стили для формы в wp
 .order-form {
   display: flex;
   flex-direction: column;
@@ -8,14 +8,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 39px 33px;
-  }
-}
-
-.order-form__message {
-  height: 160px;
-
-  @media #{$desktop} {
-    grid-column: 1/-1;
   }
 }
 
@@ -32,7 +24,43 @@
   }
 }
 
-.order-form__agreement {
+// обертка для полей в форме
+.wpcf7-form-control-wrap {
+  display: block;
+}
+
+// нормализация оберток в форме
+.order-form p {
+  @include margin-tb(0);
+}
+
+.order-form br {
+  display: none;
+}
+
+// текстовая область
+.order-form__message {
+  height: 160px;
+}
+
+p:has(.order-form__message) {
+  @media #{$desktop} {
+    grid-column: 1/-1;
+  }
+}
+
+// обертка для согласия
+.wpcf7-list-item {
+  margin: 0;
+}
+
+p:has(.checkbox) {
+  @media #{$desktop} {
+    order: 1;
+  }
+}
+
+.wpcf7-list-item label {
   display: flex;
   gap: 20px;
   align-items: flex-start;
@@ -40,15 +68,12 @@
   color: #5B5B5B;
 
   @media #{$desktop} {
-    order: 1;
     align-items: center;
   }
 }
 
 .order-form__checkbox {
   flex-shrink: 0;
-
-  @media #{$desktop} {}
 }
 
 .order-form__agreement:has(.order-form__checkbox:hover) .order-form__agreement-text {
@@ -75,9 +100,11 @@
 }
 
 .order-form__button {
+  width: 100%;
+
   @media #{$desktop} {
     min-width: 247px;
-    flex-shrink: 0;
+    width: auto;
     padding: 18px 25px;
   }
 }

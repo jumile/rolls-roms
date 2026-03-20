@@ -3,6 +3,7 @@
 @import 'global/global.scss';
 @import 'global/visually-hidden.scss';
 @import 'global/section-wrapper.scss';
+@import 'global/cols-2.scss';// отключить для вп
 
 
 @import 'blocks/button.scss';
@@ -17,10 +18,10 @@
 @import 'blocks/page.scss';
 @import 'blocks/header.scss';
 @import 'blocks/hero.scss';
-@import 'blocks/order.scss';
 @import 'blocks/order-form.scss';
 @import 'blocks/form-field.scss';
 @import 'blocks/checkbox.scss';
+@import 'blocks/accordion.scss'; // отключить для вп
 @import 'blocks/footer.scss';
 
 
@@ -29,8 +30,10 @@
 @import 'wp/about.scss';
 //@import 'wp/catalog.scss';
 @import 'wp/slider.scss';
-@import 'wp/buying.scss';
+//@import 'wp/buying.scss';
 //@import 'wp/news.scss';
 @import 'wp/accordion.scss';
 @import 'wp/feedback.scss';
+@import 'wp/order.scss';
+@import 'wp/form.scss';
 @import 'wp/gallery.scss';

@@ -1,20 +1,29 @@
 // ???
 section {
-  margin-block-end: $mobile-mb;
+  //--margin-block-end: $mobile-mb;
 
   @media #{$desktop} {
-    margin-block-end: $desktop-mb;
+    //--  margin-block-end: $desktop-mb;
   }
 }
 
 h2 {
-  @include margin-tb(3.75rem); // 60px
+  //--@include margin-tb(3.75rem); // 60px
+  margin-block-start: $mobile-mb;
+  margin-block-end: 3.75rem; // 60px
   @include font($font-title, 2.25rem, 700, 130%, $title-color); // 36px
   text-transform: uppercase;
 
   @media #{$desktop} {
-    @include margin-tb(7.5rem); // 120px
+    //--  @include margin-tb(7.5rem); // 120px
+    margin-block-start: $desktop-mb;
+    margin-block-end: 7.5rem; // 120px
     font-size: 3.4375rem; //55px
+
+    // заголовок экрана, идущего вслед за hero
+    &:first-of-type {
+      margin-block-start: $desktop-mb-small;
+    }
   }
 }
 
@@ -41,10 +50,6 @@ ul {
 
 li {
   margin-block-end: 0.5rem;
-
-  /*  @media #{$desktop} {
-    @include margin-tb(0.5rem);
-  } */
 }
 
 a {
@@ -57,35 +62,55 @@ a {
 
   &:active {
     color: $accent-color;
-
     opacity: 0.5;
   }
 }
 
-.cols-2 {
+
+//--
+// колонки
+.wp-block-columns {
   @media #{$desktop} {
-    display: flex;
-    gap: 50px;
-    align-items: flex-start;
+    gap: 3.125rem; //50px;
   }
 
   & img {
-    flex-shrink: 0;
-    max-width: 320px;
-    height: auto;
     display: block;
-    margin: 0 auto 45px;
+    margin: 0 auto;
     border-radius: 10px;
 
     @media #{$desktop} {
-      width: 537px;
-      max-width: none;
+      // width: 537px;
+      // max-width: none;
+      margin: 0 0 45px;
+    }
+  }
+
+  & figure {
+    margin: 0 auto;
+    width: fit-content;
+
+    @media #{$tablet} {
       margin: 0;
     }
   }
 }
+
+//--
+@media #{$tablet} {
+  .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column {
+    flex-basis: 100%; //50%;
+  }
+
+  .wp-block-column:has(figure) {
+    flex-basis: 44% !important;
+    flex-shrink: 0;
+  }
+}
+
 // изображения внутри текста, как разделители (в мобилке)
-.cols-2-text-wrapper img {
+// обязательно добавлять класс при вставке в WP
+.image-divider {
   max-width: 178px;
   height: auto;
   display: block;
@@ -95,3 +120,46 @@ a {
     display: none;
   }
 }
+
+//--
+// класс для левой колонки с лейбочкой natural
+.about-natural {
+  position: relative;
+}
+
+.about-natural::after {
+
+  @media #{$desktop} {
+    content: "";
+    display: block;
+    width: 178px;
+    height: 169px;
+    background: url(../../images/natural.png) no-repeat center;
+    position: absolute;
+    bottom: 20px;
+    right: -100%;
+    z-index: -1;
+  }
+}
+
+//--
+// изображение рядом с формой
+.order-image {
+  display: none;
+
+  @media #{$desktop} {
+    display: block;
+    width: 282px;
+    height: auto;
+    flex-shrink: 0;
+  }
+}
+
+//--
+.wp-block-column:has(.order-image) {
+   @media #{$desktop} {
+    flex-basis: 282px !important;
+    flex-shrink: 0;
+  }
+}
+

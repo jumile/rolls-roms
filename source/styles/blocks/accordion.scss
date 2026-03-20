@@ -1,18 +1,19 @@
-//-- для вп
-.wp-block-accordion {
+// для вп не нужкен весь файл
+.accordion {
   @include list();
 }
 
-.wp-block-accordion-item {
+.accordion__panel {
   margin-block-end: 30px;
 
   @media #{$desktop} {
     margin-block-end: 40px;
   }
 
+  &--open {}
 }
 
-.wp-block-accordion-heading {
+.accordion__panel-title {
   @include font($font-text, 1.25rem, 600, 130%, $title-color); //20px;
   text-transform: uppercase;
   @include margin-tb(0.6875rem); //11px
@@ -30,22 +31,22 @@
     mask-size: 23px auto;
   }
 
-  &:has(button:hover)::before {
+  &:has(a:hover)::before {
     background: $effect-color;
   }
 
-  &:has(button:focus-visible)::before {
+  &:has(a:focus-visible)::before {
     background: $effect-color;
   }
 
-  &:has(button:active)::before {
+  &:has(a:active)::before {
     background: $title-color;
     opacity: 0.5;
   }
 
 }
 
-.wp-block-accordion-heading__toggle {
+.accordion__panel-title a {
   @include links();
 
   &:hover,
@@ -59,14 +60,20 @@
   }
 }
 
-.wp-block-accordion-heading__toggle:hover .wp-block-accordion-heading__toggle-title {
-  text-decoration: none;
+.accordion__panel-content {
+  display: none;
 }
 
-.wp-block-accordion-panel p {
+.accordion__panel-content p {
   @include margin-tb(0.75rem); //12px
 }
 
-.is-open .wp-block-accordion-heading::before {
-  mask: url(../../images/vector/arrow-news-up.svg) no-repeat;
+.accordion__panel--open {
+  & .accordion__panel-title::before {
+    mask: url(../../images/vector/arrow-news-up.svg) no-repeat;
+  }
+
+  & .accordion__panel-content {
+    display: block;
+  }
 }

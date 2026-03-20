@@ -1,4 +1,7 @@
-.feedback ul {
+// --
+// feedback-list - для списка с отзывами
+.feedback ul,
+.feedback-list {
   @include list();
   display: flex;
   flex-direction: column;
@@ -13,7 +16,8 @@
   }
 }
 
-.feedback li {
+.feedback li,
+.feedback-list li {
   outline: 2px solid $accent-color;
   border-radius: 20px;
   padding: 25px 20px 10px;
@@ -25,10 +29,12 @@
   }
 }
 
-.feedback li.hidden {
+.feedback li.hidden,
+.feedback-list li.hidden {
   display: none;
 }
 
+//++ удалить для wp
 .feedback__button {
   width: 20rem; // 320px;
   margin-inline: auto;
@@ -39,6 +45,51 @@
 
   &--nojs {
     display: none;
+  }
+}
+
+//--
+// кнопка в отзывах
+.feedback .wp-block-button__link {
+  @include links();
+  @include font($font-text, 1.6875rem, 600, 100%, #fff); //27px
+  width: 20rem; // 320px;
+  margin-inline: auto;
+  display: block;
+  text-align: center;
+  background: $accent-color;
+  border: none;
+  border-radius: 5px;
+  padding: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  @media #{$desktop} {
+    width: 23.6875rem; // 379px
+  }
+
+  &--nojs {
+    display: none;
+  }
+
+  &:hover {
+    background: $effect-color;
+    color: #fff;
+  }
+
+  &:focus-visible {
+    background: $effect-color;
+    color: #fff;
+  }
+
+  &:active {
+    background: $effect-color;
+    color: #fff;
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    background: $disabled-color;
   }
 }
 
