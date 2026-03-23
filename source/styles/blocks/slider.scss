@@ -1,0 +1,68 @@
+.slider {
+  @media #{$desktop} {
+    position: relative;
+  }
+}
+
+.slider__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-block-end: 45px;
+
+  @media #{$desktop} {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.slider__button {
+  display: block;
+  width: 41px;
+  height: 16px;
+
+  @media #{$desktop} {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.slider__list {
+  @include list();
+  display: flex;
+  gap: 21px;
+  overflow-x: hidden;
+
+  @media #{$desktop} {
+    justify-content: center;
+  }
+}
+
+.slider__item {
+  padding: 20px;
+  border: 2px solid $accent-color;
+  border-radius: 10px;
+  flex-shrink: 0;
+  flex-basis: 320px;
+  background: #fff;
+}
+
+.slider-image {
+  display: block;
+  width: 280px;
+  //height: 210px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-block-end: 24px;
+}
+
+.slider__title {
+  @include margin-tb(0.625rem); //10px
+  @include font($font-text, 1.25rem, 700, 130%, $text-color); // 20px
+}
+
+.slider__description {
+  @include margin-tb(0);
+}
