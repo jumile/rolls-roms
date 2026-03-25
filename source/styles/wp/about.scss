@@ -8,26 +8,14 @@
   }
 }
 
-//--
 .about__wrapper {
   @media #{$desktop} {
     max-width: 1440px;
     margin: 0 auto;
-    //position: relative;
+    position: relative;//
 
     background: url(../../images/natural.png) no-repeat right bottom;
 
-    /* &::after {
-      content: "";
-      display: block;
-      width: 178px;
-      height: 169px;
-      background: url(../../images/natural.png) no-repeat center;
-      position: absolute;
-      bottom: -100px;
-      right: 0;
-      z-index: -1;
-    } */
   }
 }
 

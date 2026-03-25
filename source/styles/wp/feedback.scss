@@ -1,7 +1,119 @@
+.wp-block-cb-carousel-v2 {
+  padding-block-start: 60px; // т.к. ниж. поле от заголовка съедается кнопками с абсолютом
+
+  @media #{$desktop} {
+    padding-block-start: 0;
+  }
+}
+
+// кнопки 
+.wp-block-cb-carousel-v2 .cb-button-prev,
+.wp-block-cb-carousel-v2 .cb-button-next {
+  width: 41px;
+  height: 16px;
+  border: none;
+  padding: 0;
+  margin-top: 0;
+  background-color: transparent !important;
+  background-repeat: no-repeat !important;
+  background-position: left center !important;
+  background-image: url(../../images/vector/arrow-mobile.svg) !important;
+  cursor: pointer;
+
+  top: 0;
+  left: 0;
+
+  @media #{$desktop} {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: $accent-color !important;
+    background-position: center !important;
+    background-image: url(../../images/vector/arrow-desktop.svg) !important;
+    background-size: 26px auto !important;
+    top: var(--swiper-navigation-top-offset, 50%);
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    @media #{$desktop} {
+      background-color: $effect-color !important;
+      color: #fff;
+    }
+  }
+
+  &:focus-visible {
+    @media #{$desktop} {
+      background-color: $effect-color !important;
+      color: #fff;
+    }
+  }
+
+  &:active {
+    opacity: 0.8;
+
+    @media #{$desktop} {
+      background-color: $effect-color !important;
+      color: #fff;
+
+    }
+  }
+}
+
+.wp-block-cb-carousel-v2 .cb-button-next {
+  transform: rotate(180deg);
+  left: auto;
+  right: 0;
+
+  @media #{$desktop} {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 1 !important;
+
+  @media #{$desktop} {
+    background-color: $disabled-color !important;
+  }
+}
+
+// удаляет станд. стрелку плагина
+.wp-block-cb-carousel-v2 .cb-button-prev::after,
+.wp-block-cb-carousel-v2 .cb-button-next::after {
+  content: none;
+}
+
+// слайдер
+.swiper {
+  max-width: 1015px;
+  margin: 0 auto;
+}
+
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+// отдельный слайд
+.swiper-slide {
+  flex-basis: 320px;
+  flex-shrink: 0;
+  height: auto !important;
+  padding: 20px;
+  border: 2px solid $accent-color;
+  border-radius: 10px;
+  background: #fff;
+}
+
+
+
+
 // --
 // feedback-list - для списка с отзывами
-.feedback ul,
-.feedback-list {
+//.feedback ul,
+/* .feedback-list {
   @include list();
   display: flex;
   flex-direction: column;
@@ -14,10 +126,10 @@
     gap: 36px;
     margin-block-end: 108px;
   }
-}
+} */
 
-.feedback li,
-.feedback-list li {
+//.feedback li,
+/* .feedback-list li {
   outline: 2px solid $accent-color;
   border-radius: 20px;
   padding: 25px 20px 10px;
@@ -32,10 +144,10 @@
 .feedback li.hidden,
 .feedback-list li.hidden {
   display: none;
-}
+} */
 
 //++ удалить для wp
-.feedback__button {
+/* .feedback__button {
   width: 20rem; // 320px;
   margin-inline: auto;
 
@@ -46,11 +158,11 @@
   &--nojs {
     display: none;
   }
-}
+} */
 
 //--
 // кнопка в отзывах
-.feedback .wp-block-button__link {
+/* .feedback .wp-block-button__link {
   @include links();
   @include font($font-text, 1.6875rem, 600, 100%, #fff); //27px
   width: 20rem; // 320px;
@@ -91,7 +203,7 @@
   &:disabled {
     background: $disabled-color;
   }
-}
+} */
 
 
 

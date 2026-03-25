@@ -110,7 +110,7 @@ a {
 
 // изображения внутри текста, как разделители (в мобилке)
 // обязательно добавлять класс при вставке в WP
-.image-divider {
+.wp-block-columns .image-divider {
   max-width: 178px;
   height: auto;
   display: block;

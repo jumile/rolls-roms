@@ -20,7 +20,7 @@ if (header) {
 
 
 // feedback
-//--const moreFeedbackButton = document.querySelector('.feedback__button');
+/* //--const moreFeedbackButton = document.querySelector('.feedback__button');
 const moreFeedbackButton = document.querySelector('.feedback .wp-block-button__link'); // кнопка в WP
 const feedbacks = document.querySelectorAll('.feedback li, .feedback-list li');
 let feedbackShowFlag = false;
@@ -49,7 +49,7 @@ if (moreFeedbackButton && feedbacks) {
     if (feedbackShowFlag) moreFeedbackButton.textContent = 'Свернуть отзывы';
     else moreFeedbackButton.textContent = 'Почитать все';
   });
-}
+} */
 
 
 // form

@@ -3,6 +3,10 @@
 }
 .page__body {
   margin: 0;
-  background: url(../../images/page-bg-op10.png);
+  background: image-set(url(../../images/page-bg-mobile.webp) type("image/webp"),url(../../images/page-bg-mobile.png));
 
+  @media #{$desktop} {
+    background: image-set(url(../../images/page-bg.webp) type("image/webp"), url(../../images/page-bg.png));
+    
+  }
 }
